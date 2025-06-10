@@ -1,0 +1,47 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "1769-portola",
+        "title": "Portolá Expedition Arrives at Santa Barbara Channel",
+        "year": 1769,
+        "description": "First Spanish over‑land expedition passes Chumash villages, marking colonial incursion.",
+        "passageId": "story-river"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-119.701, 34.408]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "1896-summerland",
+        "title": "Summerland Oil Field Pioneers On‑shore & Off‑shore Wells",
+        "year": 1896,
+        "description": "Summerland becomes one of the world’s first off‑shore drilling sites, foreshadowing later environmental hazards.",
+        "passageId": "slow-violence"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-119.509, 34.419]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "1969-blowout",
+        "title": "1969 Santa Barbara Channel Blowout",
+        "year": 1969,
+        "description": "Union Oil Platform A blowout spills >3 million gallons of crude, galvanizing the modern environmental movement.",
+        "passageId": "survivance"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-119.588, 34.390]
+      }
+    }
+  ]
+}

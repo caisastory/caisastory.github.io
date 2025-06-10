@@ -1,0 +1,14 @@
+{
+  "story-river": {
+    "text": "Story is a river where no gallon of water is the same gallon it was one second ago — yet it remains the same river.",
+    "audio": "assets/audio/kelp.mp3"
+  },
+  "slow-violence": {
+    "text": "But slow violence leaves its slick of grief, seeping into every tide pool until the present smells of the past.",
+    "audio": "assets/audio/kelp.mp3"
+  },
+  "survivance": {
+    "text": "Survival means refusing silence: speaking oil‑dark truths into the bright tourist gaze.",
+    "audio": "assets/audio/kelp.mp3"
+  }
+}
