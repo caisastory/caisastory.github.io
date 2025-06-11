@@ -17,10 +17,10 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 // 2  Native Land overlay (requires free Mapbox token)
 const NATIVE_LAND_TILESET =
-  'https://native-land.ca/api/polygons/geojson/territories?key=7qM2eTyozYjwYuQ6M6AkC';
+  'https://api.mapbox.com/styles/v1/native-land/ckp57y81m0apl17o8bzllyddu/tiles/256/{z}/{x}/{y}@2x?access_token=7qM2eTyozYjwYuQ6M6AkC';
 
 L.tileLayer(NATIVE_LAND_TILESET, {
-  opacity: 1,
+  opacity: 0.5,
   attribution:
     'Indigenous territories © Native Land Digital',
 }).addTo(map);
@@ -38,20 +38,16 @@ fetch('data/passages.json')
 
 function initEventsLayer(geojson) {
   eventsLayer = L.geoJSON(geojson, {
-  pointToLayer: (feature, latlng) => {
-    const category = feature.properties.category || 'default';
-    const icon = L.icon({
-      iconUrl: `assets/image/${category}.png`,
-      iconSize: [32, 32], // adjust size as needed
-      iconAnchor: [16, 32], // anchor point so bottom of icon points to the location
-      popupAnchor: [0, -32], // position of the popup relative to the icon
-      errorOverlayUrl: 'assets/image/default.png'
-    });
-    return L.marker(latlng, { icon });
-  },
-  onEachFeature: (feature, layer) => {
-    layer.bindPopup(buildPopup(feature.properties));
-  },
+    pointToLayer: (feature, latlng) =>
+      L.circleMarker(latlng, {
+        radius: 6,
+        color: '#d95f02',
+        weight: 1,
+        fillOpacity: 0.85,
+      }),
+    onEachFeature: (feature, layer) => {
+      layer.bindPopup(buildPopup(feature.properties));
+    },
   }).addTo(map);
 
   // Build the timeline slider only after the data is ready
@@ -103,14 +99,8 @@ function buildSlider(geojson) {
 function filterEvents(year) {
   eventsLayer.eachLayer((layer) => {
     const eventYear = layer.feature.properties.year;
-    const visible = Math.abs(eventYear - year) <= 10;
-
-    const el = layer.getElement();
-    if (el) {
-      el.style.opacity = visible ? '1' : '0';
-      el.style.pointerEvents = visible ? 'auto' : 'none';
-    }
-
+    const visible = eventYear <= year;
+    layer.setStyle({ opacity: visible ? 1 : 0, fillOpacity: visible ? 0.85 : 0 });
     if (!visible && layer.isPopupOpen()) {
       layer.closePopup();
     }
