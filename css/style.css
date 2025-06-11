@@ -30,3 +30,7 @@ html, body, #map {
   max-width: 800px;
   z-index: 1000;
 }
+
+.leaflet-marker-icon {
+  transition: opacity 0.6s ease;
+}

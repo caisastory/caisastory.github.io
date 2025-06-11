@@ -1,14 +1,21 @@
 {
   "story-river": {
-    "text": "Story is a river where no gallon of water is the same gallon it was one second ago — yet it remains the same river.",
-    "audio": "assets/audio/kelp.mp3"
+    "text": "Story is the most powerful force in the world—in our world, maybe in all worlds. Story is culture. Story, like culture, is constantly moving. It is a river where no gallon of water is the same gallon it was one second ago — yet it remains the same river.",
+    "audio_tmp": "assets/audio/kelp.mp3"
   },
-  "slow-violence": {
-    "text": "But slow violence leaves its slick of grief, seeping into every tide pool until the present smells of the past.",
-    "audio": "assets/audio/kelp.mp3"
+  "story-culture": {
+    "text": "Culture is lost when we neglect to tell our stories, when we forget the power and craft of storytelling."
   },
-  "survivance": {
-    "text": "Survival means refusing silence: speaking oil‑dark truths into the bright tourist gaze.",
-    "audio": "assets/audio/kelp.mp3"
+  "violence-protest": {
+    "text": "We each have our chosen weapons… I choose to make this book: to create a space where voices can speak after long and often violently imposed silence."
+  },
+  "violence-oil": {
+    "text": "But slow violence leaves its slick of grief, seeping into every tide pool until the present smells of the past."
+  },
+  "survive-oil": {
+    "text": "Survival means refusing silence: speaking oil‑dark truths into the bright tourist gaze."
+  },
+  "survive-change": {
+    "text": "Those who will not change do not survive; but who are we, when we have survived?"
   }
 }
