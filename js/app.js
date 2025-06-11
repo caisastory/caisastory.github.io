@@ -17,7 +17,7 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 // 2  Native Land overlay (requires free Mapbox token)
 const NATIVE_LAND_TILESET =
-  'https://api.mapbox.com/styles/v1/native-land/ckp57y81m0apl17o8bzllyddu/tiles/256/{z}/{x}/{y}@2x?access_token=YOUR_TOKEN_HERE';
+  'https://api.mapbox.com/styles/v1/native-land/ckp57y81m0apl17o8bzllyddu/tiles/256/{z}/{x}/{y}@2x?access_token=7qM2eTyozYjwYuQ6M6AkC';
 
 L.tileLayer(NATIVE_LAND_TILESET, {
   opacity: 0.5,
